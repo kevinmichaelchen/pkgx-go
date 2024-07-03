@@ -1,6 +1,6 @@
 FROM pkgxdev/pkgx
 
-COPY --from=golang:1.22.4-alpine3.19 /usr/local/go/ /usr/local/go/
+COPY --from=golang:1.22.5-alpine3.19 /usr/local/go/ /usr/local/go/
 ENV PATH="/usr/local/go/bin:${PATH}"
 
 RUN pkgx install git@latest ssh-keyscan ssh-agent
